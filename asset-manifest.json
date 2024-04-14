@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/prezentesport/static/css/main.43c90e5f.css",
-    "main.js": "/prezentesport/static/js/main.98ba1968.js",
+    "main.css": "/prezentesport/static/css/main.54536593.css",
+    "main.js": "/prezentesport/static/js/main.01740634.js",
     "static/js/453.f24c1b2c.chunk.js": "/prezentesport/static/js/453.f24c1b2c.chunk.js",
     "static/media/background.svg": "/prezentesport/static/media/background.6a9e94828b76809c63aa.svg",
     "index.html": "/prezentesport/index.html",
-    "main.43c90e5f.css.map": "/prezentesport/static/css/main.43c90e5f.css.map",
-    "main.98ba1968.js.map": "/prezentesport/static/js/main.98ba1968.js.map",
+    "main.54536593.css.map": "/prezentesport/static/css/main.54536593.css.map",
+    "main.01740634.js.map": "/prezentesport/static/js/main.01740634.js.map",
     "453.f24c1b2c.chunk.js.map": "/prezentesport/static/js/453.f24c1b2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43c90e5f.css",
-    "static/js/main.98ba1968.js"
+    "static/css/main.54536593.css",
+    "static/js/main.01740634.js"
   ]
 }
