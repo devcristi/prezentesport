@@ -6,10 +6,9 @@ import { styled } from '@mui/material/styles';
 import { TextField } from "@mui/material";
 import { Box } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import Switch from '../Switch/Switch';
 
-function Signup() {
-
-
+function Signup({ darkMode, handleThemeChange }) {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [isFirstNameValid, setIsFirstNameValid] = useState(true);
@@ -89,11 +88,22 @@ function Signup() {
                 password: password
             };
 
+            fetch('http://localhost:8080/student/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            }).then(() => {
+                console.log('new student added');
+            });
+
             console.log(formData);
         }
     };
     return(
         <Box sx={{display: 'flex', flexDirection: 'row', width:'100%', height:'100%'}}>
+            <Switch checked={darkMode} onChange={handleThemeChange} />
             <Box className="info" sx={{
                     width: '60%',
                     height: '100vh',
@@ -112,6 +122,7 @@ function Signup() {
                 }}>
 
                 <Typography variant="h2" color="initial" sx={{
+                    color: darkMode ? 'white' : 'black',
                     fontSize: '3em',
                     [theme.breakpoints.down('sm')]:{
                         fontSize: '1.8em',
@@ -254,7 +265,9 @@ function Signup() {
                     <Box sx={{ width: '100%' }}>
                         <Button variant="contained" onClick={handleSubmit} color="primary">Creare cont</Button>
                     </Box>
-                    <Typography variant="h6" color="initial">
+                    <Typography variant="h6" sx={{
+                        color: darkMode ? 'white' : 'black',
+                    }}>
                         Ai deja un cont?
                     </Typography>
                     <Link to="/login">
